@@ -3,7 +3,6 @@ import localFont from 'next/font/local';
 import './globals.css';
 import Header from './components/layout/Header';
 import StickyWidget from './components/layout/StickyWidget';
-import Hero from './components/layout/Hero';
 
 const NueueMontrealBold = localFont({
   src: './fonts/NeueMontreal-Bold.otf',

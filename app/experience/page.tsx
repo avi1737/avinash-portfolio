@@ -4,7 +4,6 @@ import { ExperienceItem } from '../types/experience';
 import StealthLogo from '../assets/stealth_design_logo.jpeg';
 import KoyalTechLogo from '../assets/koyal_logo.jpeg';
 import EmployeeForumsLogo from '../assets/employeeforums_logo.jpeg';
-import UnobotLogo from '../assets/unobotai_logo.jpeg';
 
 // Mock data function
 async function getExperienceData(): Promise<ExperienceItem[]> {

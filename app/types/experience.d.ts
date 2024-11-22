@@ -1,6 +1,6 @@
 // types/experience.d.ts
 export interface ExperienceItem {
-  logo: any; // URL of the company logo
+  logo: string | StaticImageData; // URL of the company logo
   name: string; // Company name
   companyLink: string; // URL to the company's website
   designation: string; // Your role in the company

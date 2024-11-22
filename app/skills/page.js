@@ -34,7 +34,7 @@ const Skills = async () => {
 
   return (
     <div className="grid grid-cols-4 gap-10">
-      {skills.map((item, index) => (
+      {skills.map((item) => (
         <div key={item.label} className="text-center">
           <Image src={item.icon} alt={item.label} width={100} height={100} />
           <p className="text-center mt-2">{item.label}</p>
