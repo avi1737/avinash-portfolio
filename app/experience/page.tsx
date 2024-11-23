@@ -1,4 +1,3 @@
-// app/experience/page.tsx
 import ExpCard from './ExpCard';
 import { ExperienceItem } from '../types/experience';
 import StealthLogo from '../assets/stealth_design_logo.jpeg';
@@ -40,7 +39,7 @@ const Experience = async () => {
   const experiences = await getExperienceData(); // Fetch data on the server
 
   return (
-    <div className="flex flex-col gap-10 md:grid md:grid-cols-2 md:gap-10">
+    <div className="flex flex-col gap-5 md:grid md:grid-cols-2 md:gap-5">
       {experiences.map((exp, index) => (
         <ExpCard key={index} experience={exp} />
       ))}

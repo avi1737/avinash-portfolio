@@ -25,7 +25,7 @@ function Header() {
   ];
 
   return (
-    <header className="h-auto lg:h-[60px] w-full p-4 transition-all ease-in-out backdrop-blur-md fixed top-0 flex flex-col items-center justify-center lg:flex-row lg:justify-between lg:items-center">
+    <header className="h-auto p-2 lg:h-[60px] w-full transition-all ease-in-out backdrop-blur-md fixed top-0 flex flex-col items-center justify-center lg:flex-row lg:justify-between lg:items-center">
       <div className="container flex flex-col md:flex-row">
         <div className="w-1/2 flex flex-row justify-items-start gap-10 items-center">
           {NAVIGATON_LINKS.map((item: NavigationItem) => (

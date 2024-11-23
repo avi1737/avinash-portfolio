@@ -8,7 +8,7 @@ interface ExpCardProps {
 
 const ExpCard: React.FC<ExpCardProps> = ({ experience }) => {
   return (
-    <div className="border-[1px] border-transparent shadow-lg p-6 rounded-md hover:opacity-100 cursor-pointer">
+    <div className="border-[1px] border-transparent shadow-lg p-2 hover:opacity-100 cursor-pointer border-b-slate-300 border-dashed">
       <Image
         src={experience.logo}
         alt={`${experience.name} logo`}
@@ -17,8 +17,8 @@ const ExpCard: React.FC<ExpCardProps> = ({ experience }) => {
         height={50}
       />
 
-      <div className="details">
-        <h3 className="font-nueueBold text-[30px]">
+      <div className="details mt-1">
+        <h3 className="font-nueueBold text-[18px]">
           <a
             href={experience.companyLink}
             target="_blank"
@@ -27,7 +27,7 @@ const ExpCard: React.FC<ExpCardProps> = ({ experience }) => {
             {experience.name}
           </a>
         </h3>
-        <p className="designation font-nueueBold text-[18px]">
+        <p className="designation font-nueueMedium text-[14px]">
           {experience.designation}
         </p>
         <p className="timeline">{experience.timeline}</p>

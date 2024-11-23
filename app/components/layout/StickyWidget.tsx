@@ -30,7 +30,7 @@ function StickyWidget() {
   ];
 
   return (
-    <div className="max-w-max gap-2 fixed lg:max-w-[440px] rounded-lg h-[60px] p-2 shadow-md bg-white flex flex-row items-center justify-between bottom-[40px] lg:bottom-[50px]">
+    <div className="w-[90%] gap-2 fixed lg:max-w-[440px] p-2 md:rounded-lg h-[60px] shadow-md bg-white flex flex-row items-center justify-between bottom-0 md:bottom-[40px] left-1/2 transform -translate-x-1/2">
       <div className="flex w-2/3 flex-row items-start gap-3">
         {socialMediaList.map((item) => (
           <Image

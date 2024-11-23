@@ -44,7 +44,7 @@ export default function RootLayout({
         style={{ fontFamily: 'var(--font-nueue-regular), sans-serif' }} // Default to regular font
       >
         <Header />
-        <div className="container mt-[100px] flex flex-col lg:flex-row items-start justify-center pb-[100px]">
+        <div className="container mt-[60px] p-2 flex flex-col lg:flex-row items-start justify-center pb-[100px]">
           <StickyWidget />
           <div className="w-full lg:w-1/2">{children}</div>
         </div>

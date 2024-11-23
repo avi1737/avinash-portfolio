@@ -11,7 +11,6 @@ import NextJSLogo from '../assets/skills/nodejs.png';
 import PostmanLogo from '../assets/skills/icons8-postman-is-the-only-complete-api-development-environment-96.png';
 import PostgresLogo from '../assets/skills/postgre.png';
 import ReduxLogo from '../assets/skills/icons8-redux-96.png';
-import RestAPILogo from '../assets/skills/icons8-rest-api-100.png';
 import MysqlLogo from '../assets/skills/mysql.png';
 
 const Skills = async () => {
@@ -28,15 +27,14 @@ const Skills = async () => {
     { icon: PostmanLogo, label: 'Postman' },
     { icon: PostgresLogo, label: 'PostgreSQL' },
     { icon: ReduxLogo, label: 'Redux' },
-    { icon: RestAPILogo, label: 'REST API' },
     { icon: MysqlLogo, label: 'MySQL' },
   ];
 
   return (
-    <div className="grid grid-cols-4 gap-10">
+    <div className="p-4 grid grid-cols-5 gap-10">
       {skills.map((item) => (
         <div key={item.label} className="text-center">
-          <Image src={item.icon} alt={item.label} width={100} height={100} />
+          <Image src={item.icon} alt={item.label} width={60} height={60} />
           <p className="text-center mt-2">{item.label}</p>
         </div>
       ))}

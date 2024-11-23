@@ -17,7 +17,6 @@ export default {
       },
       container: {
         center: true, // This will center the container
-        padding: '2rem', // Optional: Adds padding inside the container
         screens: {
           sm: '100%',
           md: '100%',
