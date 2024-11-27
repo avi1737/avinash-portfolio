@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import NavigationButton from '../ui/NavigationButton';
 
 function Header() {
@@ -6,7 +7,7 @@ function Header() {
       <div className="container flex flex-row">
         <div className="w-1/2 flex flex-row justify-items-start items-center">
           <h1 className="font-nohemiMedium text-[18px] md:text-[36px]">
-            Avinash Varpeti
+            <Link href="/">Avinash Varpeti</Link>
           </h1>
         </div>
         <div className="w-1/2 flex justify-end">

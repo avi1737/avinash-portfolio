@@ -3,6 +3,7 @@ import { ExperienceItem } from '../types/experience';
 import StealthLogo from '../assets/stealth_design_logo.jpeg';
 import KoyalTechLogo from '../assets/koyal_logo.jpeg';
 import EmployeeForumsLogo from '../assets/employeeforums_logo.jpeg';
+import PageHeader from '../components/ui/PageHeader';
 
 // Mock data function
 async function getExperienceData(): Promise<ExperienceItem[]> {
@@ -36,13 +37,12 @@ async function getExperienceData(): Promise<ExperienceItem[]> {
 }
 
 const Experience = async () => {
-  const experiences = await getExperienceData(); // Fetch data on the server
-
   return (
-    <div className="flex flex-col gap-5 md:grid md:grid-cols-2 md:gap-5">
-      {experiences.map((exp, index) => (
-        <ExpCard key={index} experience={exp} />
-      ))}
+    <div className="flex flex-col">
+      <PageHeader
+        pageTitle="Experience"
+        pageSubtitle="I have experience to create Saas product from scratch, working for clients based out of USA, Dubai and U.K."
+      />
     </div>
   );
 };
