@@ -2,28 +2,21 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 import Header from './components/layout/Header';
-import StickyWidget from './components/layout/StickyWidget';
 
-const NueueMontrealBold = localFont({
-  src: './fonts/NeueMontreal-Bold.otf',
-  variable: '--font-nueue-bold',
+const NohemiBold = localFont({
+  src: './fonts/Nohemi-Bold.otf',
+  variable: '--font-nohemi-bold',
   weight: '100 900',
 });
-const NueueMontrealLight = localFont({
-  src: './fonts/NeueMontreal-Light.otf',
-  variable: '--font-nueue-light',
-  weight: '100 900',
-});
-
-const NueueMontrealRegular = localFont({
-  src: './fonts/NeueMontreal-Regular.otf',
-  variable: '--font-nueue-regular',
+const NohemiMedium = localFont({
+  src: './fonts/Nohemi-Medium.otf',
+  variable: '--font-nohemi-medium',
   weight: '100 900',
 });
 
-const NueueMontrealMedium = localFont({
-  src: './fonts/NeueMontreal-Medium.otf',
-  variable: '--font-nueue-medium',
+const NohemiRegular = localFont({
+  src: './fonts/Nohemi-Regular.otf',
+  variable: '--font-nohemi-regular',
   weight: '100 900',
 });
 
@@ -40,14 +33,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${NueueMontrealRegular.variable} ${NueueMontrealMedium.variable} ${NueueMontrealBold.variable} ${NueueMontrealLight.variable} antialiased`}
+        className={`${NohemiBold.variable} ${NohemiMedium.variable} ${NohemiRegular.variable}  antialiased`}
         style={{ fontFamily: 'var(--font-nueue-regular), sans-serif' }} // Default to regular font
       >
         <Header />
-        <div className="container mt-[60px] p-2 flex flex-col lg:flex-row items-start justify-center pb-[100px]">
-          <StickyWidget />
+        {/* <div className="container mt-[60px] p-2 flex flex-col lg:flex-row items-start justify-center pb-[100px]">
           <div className="w-full md:w-full">{children}</div>
-        </div>
+        </div> */}
       </body>
     </html>
   );

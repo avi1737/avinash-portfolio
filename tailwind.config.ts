@@ -10,10 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        nueueBold: ['var(--font-nueue-bold)', 'sans-serif'],
-        nueueLight: ['var(--font-nueue-light)', 'sans-serif'],
-        nueueMedium: ['var(--font-nueue-medium)', 'sans-serif'],
-        nueueRegular: ['var(--font-nueue-regular)', 'sans-serif'],
+        nohemiBold: ['var(--font-nohemi-bold)', 'sans-serif'],
+        nohemiMedium: ['var(--font-nohemi-medium)', 'sans-serif'],
+        nohemiRegular: ['var(--font-nohemi-regular)', 'sans-serif'],
       },
       container: {
         center: true, // This will center the container

@@ -1,41 +1,16 @@
-import Link from 'next/link';
-import Button from '../ui/Button';
-
-type NavigationItem = {
-  title: string;
-  link: string;
-};
-
-type NavigationList = NavigationItem[];
+import NavigationButton from '../ui/NavigationButton';
 
 function Header() {
-  const NAVIGATON_LINKS: NavigationList = [
-    {
-      title: 'Home',
-      link: '/',
-    },
-    {
-      title: 'Experience',
-      link: '/experience',
-    },
-    {
-      title: 'Contact',
-      link: '/contact',
-    },
-  ];
-
   return (
-    <header className="h-auto p-2 lg:h-[60px] w-full transition-all ease-in-out backdrop-blur-md fixed top-0 flex flex-col items-center justify-center lg:flex-row lg:justify-between lg:items-center">
-      <div className="container flex flex-col md:flex-row">
-        <div className="w-1/2 flex flex-row justify-items-start gap-10 items-center">
-          {NAVIGATON_LINKS.map((item: NavigationItem) => (
-            <Link key={item.title} href={item.link}>
-              {item.title}
-            </Link>
-          ))}
+    <header className="h-auto p-2 lg:h-[80px] w-full fixed top-0 flex  items-center justify-center">
+      <div className="container flex flex-row">
+        <div className="w-1/2 flex flex-row justify-items-start items-center">
+          <h1 className="font-nohemiMedium text-[18px] md:text-[36px]">
+            Avinash Varpeti
+          </h1>
         </div>
-        <div className="w-1/2 hidden md:flex justify-end">
-          <Button text="Download Resume" />
+        <div className="w-1/2 flex justify-end">
+          <NavigationButton />
         </div>
       </div>
     </header>
