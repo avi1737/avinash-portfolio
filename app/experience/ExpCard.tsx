@@ -8,7 +8,7 @@ interface ExpCardProps {
 
 const ExpCard: React.FC<ExpCardProps> = ({ experience }) => {
   return (
-    <div className="border-[1px] border-transparent shadow-lg p-2 hover:opacity-100 cursor-pointer border-b-slate-300 border-dashed">
+    <div className="border-[1px] border-transparent shadow-lg p-2 hover:opacity-100 cursor-pointer border-b-slate-300 border-dashed md:border-none">
       <Image
         src={experience.logo}
         alt={`${experience.name} logo`}

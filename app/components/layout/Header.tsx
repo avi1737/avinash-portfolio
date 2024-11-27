@@ -19,8 +19,8 @@ function Header() {
       link: '/experience',
     },
     {
-      title: 'Skills',
-      link: '/skills',
+      title: 'Contact',
+      link: '/contact',
     },
   ];
 

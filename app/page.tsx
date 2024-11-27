@@ -14,7 +14,7 @@ export default function Home() {
         />
       </div>
       <Hero />
-      <p className="font-nueueRegular text-[16px] text-justify">
+      <p className="font-nueueRegular text-[18px] text-justify">
         A talented software engineer with expertise in the MERN stack, this
         individual has successfully led teams of 4-5 developers, ensuring the
         delivery of scalable and high-quality software solutions. With a strong
@@ -23,28 +23,14 @@ export default function Home() {
         project execution.
       </p>
 
-      <p className="font-nueueRegular text-[16px] text-justify">
+      <p className="font-nueueRegular text-[18px] text-justify">
         Their frontend development skills, combined with a deep understanding of
         system design, allow them to create intuitive interfaces and architect
         robust, efficient systems. Proficiency in data structures and algorithms
         enables them to solve complex problems effectively, ensuring optimized
-        performance and reliability across applications.
-      </p>
-
-      <p className="font-nueueRegular text-[16px] text-justify">
-        In addition to development, they excel in DevOps practices, streamlining
-        CI/CD pipelines and managing cloud infrastructure for seamless
-        deployments. Their ability to bridge development and operations ensures
-        smooth workflows and a consistent focus on delivering business value
-        through technology.
-      </p>
-
-      <p className="font-nueueRegular text-[16px] text-justify">
-        This engineer has made significant contributions to major brands,
-        driving the success of impactful projects that enhance user engagement
-        and operational efficiency. Their combination of technical expertise,
-        leadership skills, and dedication to quality makes them an invaluable
-        asset to any organization.
+        performance and reliability across applications.In addition to
+        development, they excel in DevOps practices, streamlining CI/CD
+        pipelines and managing cloud infrastructure for seamless deployments.
       </p>
     </div>
   );
