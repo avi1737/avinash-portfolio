@@ -1,9 +1,8 @@
 'use client';
 
-import Image from 'next/image';
-import NavigationArrow from '../../assets/svg/navigation-arrow.svg';
 import { useRef, useState } from 'react';
 import gsap from 'gsap';
+import Button from './Button';
 
 function ExperienceKnowMore() {
   const listRef = useRef<HTMLUListElement>(null);
@@ -33,20 +32,13 @@ function ExperienceKnowMore() {
 
   return (
     <div className="w-full mt-6">
-      <h5
-        className="text-[18px] cursor-pointer flex gap-4"
+      <Button
+        text="Know more"
         onClick={() => {
           setOpenKnowMore(!isOpen);
           handleListAnimation();
         }}
-      >
-        Know more
-        <Image
-          className="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px]"
-          src={NavigationArrow}
-          alt="know-more-arrow"
-        />
-      </h5>
+      />
 
       <ul
         ref={listRef}
