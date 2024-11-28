@@ -26,13 +26,7 @@ export default {
       colors: {
         background: 'var(#240046)',
         foreground: 'var(--foreground)',
-
-        primary: '#240046',
-        secondary: '#9D4EDD',
-        textColor: '#fff',
-        primaryLight: '#fff',
-        secondaryLight: '#5A189A',
-        textColorLight: '#000',
+        primaryBlack: '#0a0a0a',
       },
     },
   },

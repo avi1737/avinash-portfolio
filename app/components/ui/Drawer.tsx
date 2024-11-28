@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import ReactDOM from 'react-dom'; // Import ReactDOM for portals
 import gsap from 'gsap';
 import Link from 'next/link';
 import NavigationArrow from '../../assets/svg/navigation-arrow.svg';
@@ -15,8 +16,14 @@ type DrawerProps = {
 };
 
 const Drawer: React.FC<DrawerProps> = ({ setDrawerOpen, isOpen }) => {
+  const [isClient, setIsClient] = useState(false); // State to track if we are on the client-side
   const drawerRef = useRef<HTMLDivElement>(null);
   const [currentSelectedIcon, setCurrentIcon] = useState(HomeIcon);
+
+  // Set isClient to true once component is mounted (on client-side)
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   // Open/close drawer animation using GSAP
   useEffect(() => {
@@ -70,11 +77,11 @@ const Drawer: React.FC<DrawerProps> = ({ setDrawerOpen, isOpen }) => {
     });
   };
 
-  return (
+  const drawerContent = (
     <div
       ref={drawerRef}
-      className="fixed top-10 left-0 w-full h-full flex flex-col z-100 text-black"
-      style={{ transform: 'translateX(-100%)' }} // Start off-screen to the left
+      className="fixed top-[80px] left-0 w-full h-full bg-primaryBlack flex flex-col z-100 text-black"
+      style={{ transform: 'translateX(-100%)', zIndex: 9999 }} // Start off-screen to the left
     >
       {/* Close button header section */}
       <div className="p-2 w-full">
@@ -151,6 +158,14 @@ const Drawer: React.FC<DrawerProps> = ({ setDrawerOpen, isOpen }) => {
       </div>
     </div>
   );
+
+  // Check if we are on the client-side before rendering the portal
+  if (!isClient) {
+    return null; // Don't render anything during server-side render
+  }
+
+  // Now we can safely use `document.body` because we're on the client-side
+  return ReactDOM.createPortal(drawerContent, document.body); // Render drawerContent into the body using React Portal
 };
 
 export default Drawer;
