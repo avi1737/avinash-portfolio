@@ -35,7 +35,7 @@ function PageHeader({ pageTitle, pageSubtitle }: PageHeaderProps) {
   }, []); // Emp
 
   return (
-    <div className="w-full min-h-full flex flex-col justify-center items-center">
+    <div className="w-full min-h-[60svh] flex flex-col justify-center items-center">
       <h1
         ref={headingRef}
         style={{ opacity: 0, scale: 0 }}

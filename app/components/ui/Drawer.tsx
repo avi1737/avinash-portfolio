@@ -18,7 +18,6 @@ type DrawerProps = {
 const Drawer: React.FC<DrawerProps> = ({ setDrawerOpen, isOpen }) => {
   const [isClient, setIsClient] = useState(false); // State to track if we are on the client-side
   const drawerRef = useRef<HTMLDivElement>(null);
-  const [currentSelectedIcon, setCurrentIcon] = useState(HomeIcon);
 
   // Set isClient to true once component is mounted (on client-side)
   useEffect(() => {
@@ -49,17 +48,6 @@ const Drawer: React.FC<DrawerProps> = ({ setDrawerOpen, isOpen }) => {
 
   const handleMouseOver = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
-    if (target.textContent === 'Experience') {
-      setCurrentIcon(ExeperienceIcon);
-    }
-
-    if (target.textContent === 'Home') {
-      setCurrentIcon(HomeIcon);
-    }
-
-    if (target.textContent === 'Contact') {
-      setCurrentIcon(ContactIcon);
-    }
 
     gsap.to(target, {
       x: '20px', // Move text 10px to the right on hover
@@ -108,7 +96,7 @@ const Drawer: React.FC<DrawerProps> = ({ setDrawerOpen, isOpen }) => {
               Home
               <span>
                 <Image
-                  className="w-[50px] h-[50px]"
+                  className="w-[20px] h-[20px] lg:w-[50px] lg:h-[50px]"
                   src={NavigationArrow}
                   alt="navigation-arrow"
                 />
@@ -124,7 +112,7 @@ const Drawer: React.FC<DrawerProps> = ({ setDrawerOpen, isOpen }) => {
               Experience
               <span>
                 <Image
-                  className="w-[50px] h-[50px]"
+                  className="w-[20px] h-[20px] lg:w-[50px] lg:h-[50px]"
                   src={NavigationArrow}
                   alt="navigation-arrow"
                 />
@@ -140,7 +128,7 @@ const Drawer: React.FC<DrawerProps> = ({ setDrawerOpen, isOpen }) => {
               Contact
               <span>
                 <Image
-                  className="w-[50px] h-[50px]"
+                  className="w-[20px] h-[20px] lg:w-[50px] lg:h-[50px]"
                   src={NavigationArrow}
                   alt="navigation-arrow"
                 />
@@ -148,13 +136,7 @@ const Drawer: React.FC<DrawerProps> = ({ setDrawerOpen, isOpen }) => {
             </Link>
           </nav>
         </div>
-        <div className="w-full lg:w-1/2 flex justify-center items-center">
-          <Image
-            src={currentSelectedIcon}
-            className="hidden lg:flex w-[256px] h-[256px]"
-            alt="home"
-          />
-        </div>
+        <div className="w-full lg:w-1/2 flex justify-center items-center"></div>
       </div>
     </div>
   );

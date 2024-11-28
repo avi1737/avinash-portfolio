@@ -37,7 +37,7 @@ export default function RootLayout({
         style={{ fontFamily: 'var(--font-nueue-regular), sans-serif' }} // Default to regular font
       >
         <Header />
-        <div className="container bg-primaryBlack mt-[60px] h-[100vh] w-[100vw] p-2 flex flex-col  items-start justify-center">
+        <div className="container bg-primaryBlack mt-[60px] w-[100vw] p-2 flex flex-col  items-start justify-center">
           <div className="w-full md:w-full">{children}</div>
         </div>
       </body>
