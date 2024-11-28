@@ -5,9 +5,6 @@ import ReactDOM from 'react-dom'; // Import ReactDOM for portals
 import gsap from 'gsap';
 import Link from 'next/link';
 import NavigationArrow from '../../assets/svg/navigation-arrow.svg';
-import HomeIcon from '../../assets/navigation/property.png';
-import ExeperienceIcon from '../../assets/navigation/achievement.png';
-import ContactIcon from '../../assets/navigation/call-back.png';
 import Image from 'next/image';
 
 type DrawerProps = {
