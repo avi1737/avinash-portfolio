@@ -1,5 +1,4 @@
 import Image from 'next/image';
-
 import profilePhoto from '../../assets/avinash-portfolio-dp.jpeg';
 
 function Hero() {
