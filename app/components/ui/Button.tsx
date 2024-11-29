@@ -51,7 +51,7 @@ const Button: React.FC<ButtonProps> = ({ text, onClick }) => {
       onMouseEnter={handleMouseOver}
       onMouseLeave={handleMouseLeave} // Add this event
       ref={buttonRef}
-      className={`px-4 py-4 flex gap-4 max-w-max bg-green-400 text-black font-nohemiMedium text-[16px]`}
+      className={`px-2 py-2 lg:px-4 lg:py-4 flex gap-4 max-w-max bg-green-400 text-black font-nohemiMedium text-[16px]`}
     >
       {text}
       <Image src={NavigationArrow} alt="btn-arrow" width={20} height={20} />

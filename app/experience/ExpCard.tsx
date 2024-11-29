@@ -34,7 +34,7 @@ const CompanyDesignation: React.FC<companyDesignationProps> = ({
 
 const ExperienceSection: React.FC<ExpCardProps> = ({ experience }) => {
   return (
-    <div className="w-full flex flex-col lg:flex-row justify-between h-auto p-4">
+    <div className="w-full flex flex-col lg:flex-row justify-between text-white h-auto p-4">
       <div className="w-[50px] h-[50px]">
         <Image
           src={experience.logo}

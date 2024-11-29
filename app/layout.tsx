@@ -34,10 +34,14 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${NohemiBold.variable} ${NohemiMedium.variable} ${NohemiRegular.variable}  antialiased`}
-        style={{ fontFamily: 'var(--font-nueue-regular), sans-serif' }} // Default to regular font
+        style={{
+          fontFamily: 'var(--font-nueue-regular), sans-serif',
+          minHeight: '100svh',
+          background: '#0a0a0a',
+        }} // Default to regular font
       >
         <Header />
-        <div className="container bg-primaryBlack mt-[60px] w-[100vw] p-2 flex flex-col  items-start justify-center">
+        <div className="container bg-primaryBlack w-[100vw] p-2 flex flex-col  items-start justify-center">
           <div className="w-full md:w-full">{children}</div>
         </div>
       </body>

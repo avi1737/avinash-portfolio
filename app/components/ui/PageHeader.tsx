@@ -35,18 +35,18 @@ function PageHeader({ pageTitle, pageSubtitle }: PageHeaderProps) {
   }, []); // Emp
 
   return (
-    <div className="w-full min-h-[60svh] flex flex-col justify-center items-center">
+    <div className="w-full min-h-[50svh] flex flex-col justify-center items-center">
       <h1
         ref={headingRef}
         style={{ opacity: 0, scale: 0 }}
-        className="font-nohemiMedium text-[56px] lg:text-[180px]"
+        className="font-nohemiMedium text-[56px] text-white lg:text-[180px]"
       >
         {pageTitle}
       </h1>
       <p
         ref={subheadingRef}
         style={{ scale: 0 }}
-        className="font-nohemiMedium text-center text-[24px] lg:text-[30px]"
+        className="font-nohemiMedium text-center text-white text-[24px] lg:text-[30px]"
       >
         {pageSubtitle}
       </p>
