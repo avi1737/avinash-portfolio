@@ -5,7 +5,7 @@ type twoColumnProps = {
 function TwoColumn({ variant }: twoColumnProps) {
   if (variant === 'coding') {
     return (
-      <div className="w-full">
+      <div className="w-full text-white">
         <div className="container flex flex-row">
           <div className="lg:w-1/2">
             <h5 className="font-nohemiMedium text-[36px] lg:text-[64px]">
@@ -35,7 +35,7 @@ function TwoColumn({ variant }: twoColumnProps) {
   }
 
   return (
-    <div className="w-full min-h-[40svh]">
+    <div className="w-full min-h-[40svh] text-white">
       <div className="container flex flex-row">
         <div className="lg:w-1/2"></div>
         <div className="lg:w-1/2">
