@@ -1,7 +1,17 @@
 // components/ExpCard.tsx
+import TypographyP from '../components/typography/TypographyP';
 import ExperienceKnowMore from '../components/ui/ExperienceKnowMore';
-import { ExperienceItem } from '../types/experience';
-import Image from 'next/image';
+
+import Image, { StaticImageData } from 'next/image';
+
+export type ExperienceItem = {
+  logo: string | StaticImageData; // URL of the company logo
+  name: string; // Company name
+  companyLink: string; // URL to the company's website
+  designation: string; // Your role in the company
+  description: string; // Brief about your role or work
+  timeline: string; // Time period (e.g., "Jan 2020 - Dec 2022")
+};
 
 interface ExpCardProps {
   experience: ExperienceItem;
@@ -35,7 +45,7 @@ const CompanyDesignation: React.FC<companyDesignationProps> = ({
 const ExperienceSection: React.FC<ExpCardProps> = ({ experience }) => {
   return (
     <div className="w-full flex flex-col lg:flex-row justify-between text-white h-auto p-4">
-      <div className="w-[50px] h-[50px]">
+      <div className="w-[50px] h-[50px] mb-4">
         <Image
           src={experience.logo}
           alt={`${experience.name} logo`}
@@ -50,13 +60,13 @@ const ExperienceSection: React.FC<ExpCardProps> = ({ experience }) => {
         designation={experience.designation}
       />
 
-      <div className="h-auto w-full lg:w-1/2">
-        <h1 className="text-[16px] font-nohemiMedium mt-4">
+      <div className="h-auto mt-[20px] lg:mt-0 w-full lg:w-1/2">
+        <TypographyP>
           I have worked on creating a SAAS from scratch here. Created using Mern
           stack. I have worked on creating a SAAS from scratch here. Created
           using Mern stack.I have worked on creating a SAAS from scratch here.
           Created using Mern stack.
-        </h1>
+        </TypographyP>
         <ExperienceKnowMore />
       </div>
     </div>

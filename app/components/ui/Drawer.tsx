@@ -1,11 +1,10 @@
+// Drawer.tsx
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom'; // Import ReactDOM for portals
 import gsap from 'gsap';
-import Link from 'next/link';
-import NavigationArrow from '../../assets/svg/navigation-arrow.svg';
-import Image from 'next/image';
+import NavigationItem from './NavigationItem'; // Import the new NavigationItem component
 
 type DrawerProps = {
   setDrawerOpen: (open: boolean) => void; // Function to manage drawer open state
@@ -43,29 +42,10 @@ const Drawer: React.FC<DrawerProps> = ({ setDrawerOpen, isOpen }) => {
     }
   }, [isOpen]);
 
-  const handleMouseOver = (e: React.MouseEvent) => {
-    const target = e.target as HTMLElement;
-
-    gsap.to(target, {
-      x: '20px', // Move text 10px to the right on hover
-      duration: 0.5,
-      ease: 'power2.out',
-    });
-  };
-
-  const handleMouseOut = (e: React.MouseEvent) => {
-    const target = e.target as HTMLElement;
-    gsap.to(target, {
-      x: '0px', // Reset text position back to normal
-      duration: 0.5,
-      ease: 'power2.out',
-    });
-  };
-
   const drawerContent = (
     <div
       ref={drawerRef}
-      className="fixed top-[80px] left-0 w-full h-full bg-primaryBlack flex flex-col z-100 text-black"
+      className="fixed  top-[50px] lg:top-[80px] left-0 w-full h-full bg-primaryBlack flex flex-col z-100 text-black"
       style={{ transform: 'translateX(-100%)', zIndex: 9999 }} // Start off-screen to the left
     >
       {/* Close button header section */}
@@ -83,54 +63,21 @@ const Drawer: React.FC<DrawerProps> = ({ setDrawerOpen, isOpen }) => {
       <div className="container flex flex-col lg:flex-row p-2 mt-20">
         <div className="w-full lg:w-1/2">
           <nav className="flex flex-col justify-center items-start gap-4 lg:gap-20">
-            <Link
+            <NavigationItem
               href="/"
-              className="text-xl  flex justify-center items-center gap-4 font-nohemiMedium border-[2px] border-transparent text-white text-[32px] lg:text-[84px]"
-              onMouseOver={handleMouseOver}
-              onMouseOut={handleMouseOut}
-              onClick={() => setDrawerOpen(false)}
-            >
-              Home
-              <span>
-                <Image
-                  className="w-[20px] h-[20px] lg:w-[50px] lg:h-[50px]"
-                  src={NavigationArrow}
-                  alt="navigation-arrow"
-                />
-              </span>
-            </Link>
-            <Link
+              text="Home"
+              setDrawerOpen={setDrawerOpen}
+            />
+            <NavigationItem
               href="/experience"
-              className="text-xl  flex justify-center items-center gap-4 font-nohemiMedium  border-[2px] border-transparent text-white text-[32px] lg:text-[84px]"
-              onMouseOver={handleMouseOver}
-              onMouseOut={handleMouseOut}
-              onClick={() => setDrawerOpen(false)}
-            >
-              Experience
-              <span>
-                <Image
-                  className="w-[20px] h-[20px] lg:w-[50px] lg:h-[50px]"
-                  src={NavigationArrow}
-                  alt="navigation-arrow"
-                />
-              </span>
-            </Link>
-            <Link
+              text="Experience"
+              setDrawerOpen={setDrawerOpen}
+            />
+            <NavigationItem
               href="/contact"
-              className="text-xl flex justify-center items-center gap-4 font-nohemiMedium  border-[2px] border-transparent text-white text-[32px] lg:text-[84px]"
-              onMouseOver={handleMouseOver}
-              onMouseOut={handleMouseOut}
-              onClick={() => setDrawerOpen(false)}
-            >
-              Contact
-              <span>
-                <Image
-                  className="w-[20px] h-[20px] lg:w-[50px] lg:h-[50px]"
-                  src={NavigationArrow}
-                  alt="navigation-arrow"
-                />
-              </span>
-            </Link>
+              text="Contact"
+              setDrawerOpen={setDrawerOpen}
+            />
           </nav>
         </div>
         <div className="w-full lg:w-1/2 flex justify-center items-center"></div>

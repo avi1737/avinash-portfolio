@@ -1,4 +1,4 @@
-import Hero from './components/layout/Hero';
+import Hero from './components/ui/Hero';
 import TwoColumn from './components/ui/TwoColumn';
 import DownloadResume from './components/ui/DownloadResume';
 import PageHeader from './components/ui/PageHeader';
@@ -16,9 +16,9 @@ export default function Home() {
       <div className="mt-16"></div>
       <Hero />
       <Gap />
-      <TwoColumn variant="coding" />
+      <TwoColumn variant="PROFILE" />
       <Gap />
-      <TwoColumn variant="skills" />
+      <TwoColumn variant="SKILLS" />
       <Gap />
       <WhatPeopleSay />
     </div>

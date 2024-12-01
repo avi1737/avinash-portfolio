@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import TypographyH1 from '../typography/TypographyH1';
+import TypographyH2 from '../typography/TypographyH2';
 
 type PageHeaderProps = {
   pageTitle: string;
@@ -13,7 +15,6 @@ function PageHeader({ pageTitle, pageSubtitle }: PageHeaderProps) {
   const subheadingRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
-    // Add a delay of 2 seconds before starting the animations
     if (headingRef.current) {
       gsap.to(headingRef.current, {
         opacity: 1,
@@ -32,24 +33,20 @@ function PageHeader({ pageTitle, pageSubtitle }: PageHeaderProps) {
         delay: 0.6, // Delay by 2 seconds
       });
     }
-  }, []); // Emp
+  }, []);
 
   return (
     <div className="w-full min-h-[50svh] flex flex-col justify-center items-center">
-      <h1
-        ref={headingRef}
+      <TypographyH1
         style={{ opacity: 0, scale: 0 }}
-        className="font-nohemiMedium text-[56px] text-white lg:text-[180px]"
-      >
-        {pageTitle}
-      </h1>
-      <p
-        ref={subheadingRef}
+        text={pageTitle}
+        ref={headingRef}
+      />
+      <TypographyH2
         style={{ scale: 0 }}
-        className="font-nohemiMedium text-center text-white text-[24px] lg:text-[30px]"
-      >
-        {pageSubtitle}
-      </p>
+        text={pageSubtitle}
+        ref={subheadingRef}
+      />
     </div>
   );
 }

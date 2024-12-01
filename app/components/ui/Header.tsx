@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import NavigationButton from '../ui/NavigationButton';
+import NavigationButton from './NavigationButton';
 
 function Header() {
   return (

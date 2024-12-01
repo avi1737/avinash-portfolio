@@ -1,19 +1,23 @@
 'use client';
 
-import Image from 'next/image';
-import NavigationArrow from '../../assets/svg/navigation-arrow-dark.svg';
+import Button from './Button';
 
 function DownloadResume() {
+  const handleDownloadClick = () => {
+    // Trigger the download programmatically if needed
+    // e.g., router.push('/assets/Avinash-resume.pdf') or any custom logic
+    const link = document.createElement('a');
+    link.href = '/assets/Avinash-resume.pdf';
+    link.download = 'Avinash-resume.pdf';
+    link.click();
+  };
+
   return (
     <div className="flex justify-center items-center">
-      <a
-        className="px-4 py-4 flex gap-4 max-w-max bg-green-400 text-black font-nohemiMedium text-[16px]"
-        href="/assets/Avinash-resume.pdf" // Updated path to use the correct location
-        download={true}
-      >
-        Download Resume
-        <Image src={NavigationArrow} alt="btn-arrow" width={20} height={20} />
-      </a>
+      <Button
+        text="Download Resume"
+        onClick={handleDownloadClick} // Trigger download when button is clicked
+      />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
-import Header from './components/layout/Header';
+import Header from './components/ui/Header';
 
 const NohemiBold = localFont({
   src: './fonts/Nohemi-Bold.otf',
