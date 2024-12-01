@@ -7,6 +7,7 @@ function Hero() {
       <Image
         className="w-[100px] rounded-[50%] h-[100px] lg:w-[250px] lg:h-[250px]"
         src={profilePhoto}
+        loading="lazy"
         alt="dp"
       />
     </div>
