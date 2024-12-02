@@ -61,12 +61,7 @@ const ExperienceSection: React.FC<ExpCardProps> = ({ experience }) => {
       />
 
       <div className="h-auto mt-[20px] lg:mt-0 w-full lg:w-1/2">
-        <TypographyP>
-          I have worked on creating a SAAS from scratch here. Created using Mern
-          stack. I have worked on creating a SAAS from scratch here. Created
-          using Mern stack.I have worked on creating a SAAS from scratch here.
-          Created using Mern stack.
-        </TypographyP>
+        <TypographyP>{experience.description}</TypographyP>
         <ExperienceKnowMore />
       </div>
     </div>

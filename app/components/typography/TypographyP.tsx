@@ -4,9 +4,9 @@ type typographyP = {
 
 function TypographyP({ children }: typographyP) {
   return (
-    <h1 className="text-[16px] lg:text-[22px] font-nohemiMedium text-white">
+    <p className="text-[16px] lg:text-[22px] font-nohemiRegular text-white text-center lg:text-left">
       {children}
-    </h1>
+    </p>
   );
 }
 

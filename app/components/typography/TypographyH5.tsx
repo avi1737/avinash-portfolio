@@ -11,7 +11,7 @@ const TypographyH5 = React.forwardRef<HTMLHeadingElement, typographyH5Types>(
       <h2
         style={style}
         ref={ref}
-        className="font-nohemiMedium text-[36px] lg:text-[64px] text-white"
+        className="font-nohemiMedium text-[36px] lg:text-[64px] text-center lg:text-left text-white"
       >
         {text}
       </h2>

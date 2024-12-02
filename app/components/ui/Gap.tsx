@@ -1,5 +1,5 @@
 function Gap() {
-  return <div className="w-full h-[50px] lg:h-[70px]"></div>;
+  return <div className="w-full h-[30px] lg:h-[50px]"></div>;
 }
 
 export default Gap;
