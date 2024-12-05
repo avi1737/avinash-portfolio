@@ -10,7 +10,8 @@ export type ExperienceItem = {
   companyLink: string; // URL to the company's website
   designation: string; // Your role in the company
   description: string; // Brief about your role or work
-  timeline: string; // Time period (e.g., "Jan 2020 - Dec 2022")
+  timeline: string; // Time period (e.g., "Jan 2020 - Dec 2022"),
+  workItems: Array<{ point: string }>;
 };
 
 interface ExpCardProps {
@@ -61,8 +62,8 @@ const ExperienceSection: React.FC<ExpCardProps> = ({ experience }) => {
       />
 
       <div className="h-auto mt-[20px] lg:mt-0 w-full lg:w-1/2">
-        <TypographyP>{experience.description}</TypographyP>
-        <ExperienceKnowMore />
+        <TypographyP textAlign="left">{experience.description}</TypographyP>
+        <ExperienceKnowMore points={experience.workItems} />
       </div>
     </div>
   );

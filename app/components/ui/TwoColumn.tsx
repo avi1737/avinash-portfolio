@@ -19,7 +19,7 @@ function CodingProfile() {
       <div className="container flex flex-col lg:flex-row">
         <div className="lg:w-1/2">
           <TypographyH5 text="Coding Profiles" />
-          <TypographyP>
+          <TypographyP textAlign="center">
             I’m a passionate problem solver with <HighlightText text="300+ " />
             problems solved on <HighlightText text=" leetcode " />
             and <HighlightText text=" 130+ " /> on GeeksforGeeks. My favorite
@@ -50,7 +50,7 @@ function TechSkills() {
         <div className="lg:w-1/2"></div>
         <div className="lg:w-1/2">
           <TypographyH5 text="Tech skills" />
-          <TypographyP>
+          <TypographyP textAlign="center">
             I have built a SaaS product from scratch, working primarily with
             frontend and backend technologies. I specialize in{' '}
             <HighlightText

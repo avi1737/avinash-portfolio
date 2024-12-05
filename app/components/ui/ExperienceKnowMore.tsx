@@ -4,7 +4,11 @@ import { useRef, useState } from 'react';
 import gsap from 'gsap';
 import Button from './Button';
 
-function ExperienceKnowMore() {
+type experienceWorkItemProps = {
+  points: Array<{ point: string }>;
+};
+
+function ExperienceKnowMore({ points }: experienceWorkItemProps) {
   const listRef = useRef<HTMLUListElement>(null);
   const [isOpen, setOpenKnowMore] = useState(false);
 
@@ -45,22 +49,11 @@ function ExperienceKnowMore() {
         className="overflow-hidden list-disc flex flex-col mt-3 gap-4"
         style={{ maxHeight: 0, opacity: 0 }} // Initial state (collapsed)
       >
-        <li className="font-nohemiRegular text-[16px]">
-          Developed responsive, interactive user interfaces with React.js,
-          Next.js, and styled-components.
-        </li>
-        <li className="font-nohemiRegular text-[16px]">
-          Implemented server-side rendering (SSR) and static site generation
-          (SSG) features with Next.js for optimal SEO and performance.
-        </li>
-        <li className="font-nohemiRegular text-[16px]">
-          Integrated APIs with React components and managed state with
-          Redux/Context API.
-        </li>
-        <li className="font-nohemiRegular text-[16px]">
-          Led the migration of legacy code to a modern React-based stack,
-          improving load times by 30%.
-        </li>
+        {points.map((item, index) => (
+          <li key={index} className="font-nohemiRegular text-[16px]">
+            {item.point}
+          </li>
+        ))}
       </ul>
     </div>
   );

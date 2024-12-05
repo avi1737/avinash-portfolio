@@ -7,8 +7,8 @@ function DownloadResume() {
     // Trigger the download programmatically if needed
     // e.g., router.push('/assets/Avinash-resume.pdf') or any custom logic
     const link = document.createElement('a');
-    link.href = '/assets/Avinash-resume.pdf';
-    link.download = 'Avinash-resume.pdf';
+    link.href = '/assets/avinash-varpeti-resume.pdf';
+    link.download = 'avinash-varpeti-resume.pdf';
     link.click();
   };
 
