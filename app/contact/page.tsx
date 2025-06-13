@@ -6,7 +6,7 @@ import Gap from '../components/ui/Gap';
 
 const Contact = async () => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center" id="contact">
       <PageHeader
         pageTitle="Contact me"
         pageSubtitle="You can reach out to me on LinkedIn, Gmail, or book a call on Calendly!"

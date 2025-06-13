@@ -61,10 +61,10 @@ const ExperienceSection: React.FC<ExpCardProps> = ({ experience }) => {
         designation={experience.designation}
       />
 
-      <div className="h-auto mt-[20px] lg:mt-0 w-full lg:w-1/2">
+      {/* <div className="h-auto mt-[20px] lg:mt-0 w-full lg:w-1/2">
         <TypographyP textAlign="left">{experience.description}</TypographyP>
         <ExperienceKnowMore points={experience.workItems} />
-      </div>
+      </div> */}
     </div>
   );
 };

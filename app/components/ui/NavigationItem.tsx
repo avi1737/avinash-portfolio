@@ -1,4 +1,7 @@
 // NavigationItem.tsx
+
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import NavigationArrow from '../../assets/svg/navigation-arrow.svg';
@@ -7,7 +10,7 @@ import gsap from 'gsap';
 type NavigationItemProps = {
   href: string;
   text: string;
-  setDrawerOpen: (open: boolean) => void;
+  // setDrawerOpen: (open: boolean) => void;
 };
 
 const NavigationItem: React.FC<NavigationItemProps> = ({
@@ -38,15 +41,15 @@ const NavigationItem: React.FC<NavigationItemProps> = ({
   return (
     <Link
       href={href}
-      className="text-xl flex justify-center items-center gap-4 font-nohemiMedium border-[2px] border-transparent text-white text-[32px] lg:text-[84px]"
+      className="text-xl flex justify-center items-center  gap-1 lg:gap-4  font-nohemiMedium border-[2px] border-transparent text-white text-[13px] lg:text-[20px]"
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
-      onClick={() => setDrawerOpen(false)} // Close drawer when link is clicked
+      // onClick={() => setDrawerOpen(false)} // Close drawer when link is clicked
     >
       {text}
       <span>
         <Image
-          className="w-[20px] h-[20px] lg:w-[50px] lg:h-[50px]"
+          className="w-[20px] h-[20px] lg:w-[20px] lg:h-[20px]"
           src={NavigationArrow}
           alt="navigation-arrow"
         />

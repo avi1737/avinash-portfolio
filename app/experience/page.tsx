@@ -109,7 +109,7 @@ const Experience = async () => {
   const experiences = await getExperienceData();
 
   return (
-    <div className="flex flex-col h-auto">
+    <div className="flex flex-col h-auto" id="experience">
       <PageHeader
         pageTitle="Experience"
         pageSubtitle="I have experience to create Saas product from scratch, working for clients based out of USA, Dubai and U.K."
