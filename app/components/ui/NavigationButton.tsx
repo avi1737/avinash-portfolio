@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
-import Drawer from './Drawer';
 
 function NavigationButton() {
   const [isDrawerOpen, setDrawerOpen] = useState<boolean>(false);
@@ -48,7 +47,7 @@ function NavigationButton() {
         </div>
       </div>
 
-      <Drawer setDrawerOpen={setDrawerOpen} isOpen={isDrawerOpen} />
+      {/* <Drawer setDrawerOpen={setDrawerOpen} isOpen={isDrawerOpen} /> */}
     </>
   );
 }

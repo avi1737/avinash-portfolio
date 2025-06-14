@@ -29,7 +29,6 @@ function DownloadResume() {
     <div className="flex justify-center items-center">
       <Button
         text="Download Resume"
-        ref={buttonRef}
         style={{ opacity: 0, scale: 1, fontSize: '20px', textAlign: 'center' }}
         onClick={handleDownloadClick} // Trigger download when button is clicked
       />

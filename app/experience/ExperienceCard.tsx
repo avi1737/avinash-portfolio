@@ -1,6 +1,4 @@
 // components/ExpCard.tsx
-import TypographyP from '../components/typography/TypographyP';
-import ExperienceKnowMore from '../components/ui/ExperienceKnowMore';
 
 import Image, { StaticImageData } from 'next/image';
 

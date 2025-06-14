@@ -8,6 +8,7 @@ import gsap from 'gsap';
 type ButtonProps = {
   text: string;
   onClick?: () => void;
+  style?: React.CSSProperties;
 };
 
 const Button: React.FC<ButtonProps> = ({ text, onClick }) => {

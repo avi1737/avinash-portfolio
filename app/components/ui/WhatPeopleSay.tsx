@@ -5,7 +5,6 @@ import JeffMessage from '../../assets/jeff-testimonial.png';
 import ZakiahMessage from '../../assets/zakiah-testimonial.png';
 import RajeshMessage from '../../assets/rajest-testimonial.png';
 import TypographyH5 from '../typography/TypographyH5';
-import Button from './Button';
 
 import jeffProfile from '../../assets/jeff_image.webp';
 import zakiahProfile from '../../assets/zakiah_image.jpeg';
@@ -63,7 +62,7 @@ function WhatPeopleSay() {
         {testimonials.map((testimonial, index) => (
           <div className="flex flex-col gap-2" key={index}>
             <div
-              ref={(el) => (cardsRef.current[index] = el)}
+              // ref={(el) => (cardsRef.current[index] = el)}
               className="bg-gray-100 p-4 z-50 rounded-lg shadow-md testimonial-card"
               onMouseEnter={() => handleCardHover(index, true)}
               onMouseLeave={() => handleCardHover(index, false)}

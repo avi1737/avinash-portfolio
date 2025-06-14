@@ -4,14 +4,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom'; // Import ReactDOM for portals
 import gsap from 'gsap';
-import NavigationItem from './NavigationItem'; // Import the new NavigationItem component
+// Import the new NavigationItem component
 
 type DrawerProps = {
   setDrawerOpen: (open: boolean) => void; // Function to manage drawer open state
   isOpen: boolean; // Boolean state to check if drawer is open
 };
 
-const Drawer: React.FC<DrawerProps> = ({ setDrawerOpen, isOpen }) => {
+const Drawer: React.FC<DrawerProps> = ({ isOpen }) => {
   const [isClient, setIsClient] = useState(false); // State to track if we are on the client-side
   const drawerRef = useRef<HTMLDivElement>(null);
 
@@ -62,7 +62,7 @@ const Drawer: React.FC<DrawerProps> = ({ setDrawerOpen, isOpen }) => {
       {/* Menu container */}
       <div className="container flex flex-col lg:flex-row p-2 mt-20">
         <div className="w-full lg:w-1/2">
-          <nav className="flex flex-col justify-center items-start gap-4 lg:gap-20">
+          {/* <nav className="flex flex-col justify-center items-start gap-4 lg:gap-20">
             <NavigationItem
               href="/"
               text="Home"
@@ -78,7 +78,7 @@ const Drawer: React.FC<DrawerProps> = ({ setDrawerOpen, isOpen }) => {
               text="Contact"
               setDrawerOpen={setDrawerOpen}
             />
-          </nav>
+          </nav> */}
         </div>
         <div className="w-full lg:w-1/2 flex justify-center items-center"></div>
       </div>

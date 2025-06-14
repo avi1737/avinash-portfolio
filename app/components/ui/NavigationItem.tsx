@@ -13,11 +13,7 @@ type NavigationItemProps = {
   // setDrawerOpen: (open: boolean) => void;
 };
 
-const NavigationItem: React.FC<NavigationItemProps> = ({
-  href,
-  text,
-  setDrawerOpen,
-}) => {
+const NavigationItem: React.FC<NavigationItemProps> = ({ href, text }) => {
   const handleMouseOver = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
 

@@ -4,8 +4,6 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import TypographyH1 from '../typography/TypographyH1';
 import TypographyH2 from '../typography/TypographyH2';
-import Image from 'next/image';
-import bgImage from '../../assets/bg_image.jpg';
 
 type PageHeaderProps = {
   pageTitle: string;

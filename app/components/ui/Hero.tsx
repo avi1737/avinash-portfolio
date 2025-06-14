@@ -8,7 +8,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 function Hero() {
-  const heroRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     if (heroRef.current) {
@@ -29,7 +29,7 @@ function Hero() {
         src={profilePhoto}
         loading="lazy"
         alt="dp"
-        ref={heroRef}
+        ref={heroRef} // Correctly typed ref
         style={{ opacity: 0, scale: 1 }}
       />
       <Gap />

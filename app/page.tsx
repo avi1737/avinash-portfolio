@@ -1,11 +1,7 @@
 import Hero from './components/ui/Hero';
-import TwoColumn from './components/ui/TwoColumn';
-import DownloadResume from './components/ui/DownloadResume';
 import PageHeader from './components/ui/PageHeader';
 import Gap from './components/ui/Gap';
 import WhatPeopleSay from './components/ui/WhatPeopleSay';
-import Experience from './experience/page';
-import Contact from './contact/page';
 
 export default function Home() {
   return (
@@ -26,10 +22,10 @@ Specialize in building robust products from scratch, tailored to unique business
       <Gap />
       <Gap />
       <WhatPeopleSay />
-      <Gap />
+      {/* <Gap />
       <Experience />
-      <Gap />
-      <Contact />
+      <Gap /> */}
+      {/* <Contact /> */}
     </div>
   );
 }
